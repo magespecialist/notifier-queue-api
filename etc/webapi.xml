@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © MageSpecialist - Skeeller srl. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+ -->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+
+    <route url="/V1/msp-notifier-queue/queue" method="GET">
+        <service class="MSP\NotifierQueueApi\Api\QueueRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="MSP_NotifierQueueApi::queue"/>
+        </resources>
+    </route>
+
+    <route url="/V1/msp-notifier-queue/queue/:queueId" method="GET">
+        <service class="MSP\NotifierQueueApi\Api\QueueRepositoryInterface" method="get"/>
+        <resources>
+            <resource ref="MSP_NotifierQueueApi::queue"/>
+        </resources>
+    </route>
+</routes>
