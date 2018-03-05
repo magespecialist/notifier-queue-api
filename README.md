@@ -1,1 +1,1 @@
-# notifier-queue-api
+Please refer to: https://github.com/magespecialist/notifier .
